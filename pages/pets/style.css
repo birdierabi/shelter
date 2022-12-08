@@ -89,3 +89,56 @@
 .pagination__icon--double-arrow-left {
   transform: rotate(180deg);
 }
+
+@media screen and (max-width: 1279px) {
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    background-color: #ffffff;
+  }
+
+  .slider__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .slider__list {
+    margin-bottom: 0;
+  }
+
+  .slider--pets .slider__list {
+    justify-content: center;
+  }
+
+  .slider__item:nth-child(7n) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pagination__list {
+    gap: 10px;
+  }
+
+  .pagination__page {
+    font-size: 20px;
+  }
+
+  .slider__wrapper {
+    padding-bottom: 0;
+    margin-bottom: 42px;
+  }
+
+  .slider__item:nth-child(2n) {
+    display: flex;
+  }
+
+  .slider__item:nth-child(4n),
+  .slider__item:nth-child(5n),
+  .slider__item:nth-child(6n) {
+    display: none;
+  }
+}
