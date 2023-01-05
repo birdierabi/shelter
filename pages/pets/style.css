@@ -34,6 +34,7 @@
 }
 
 .slider__list {
+  min-height: 900px;
   margin-bottom: 15px;
   padding: 0;
 }
@@ -124,6 +125,7 @@
   }
 
   .slider__list {
+    min-height: 1365px;
     max-width: 710px;
     margin-bottom: 0;
   }
