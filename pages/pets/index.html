@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="overlay"></div>
   <div class="container">
     <header class="page-header header header--pets wrapper">
       <a class="header__logo" href="../main/index.html" aria-label="Cozy House Logo Image">
@@ -24,13 +25,13 @@
       <nav class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link">About the shelter</a>
+            <a class="nav__link" href="../main/index.html">About the shelter</a>
           </li>
           <li class="nav__item nav__item--active">
             <a class="nav__link" href="#">Our pets</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#help">Help the shelter</a>
+            <a class="nav__link" href="../main/index.html#help">Help the shelter</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#footer">Contacts</a>
@@ -47,115 +48,24 @@
       <section class="slider slider--pets wrapper section">
         <h2 id="ourfriends" class="slider__title h2 title">Our friends who are&nbsp;looking for a&nbsp;house</h2>
         <div class="slider__wrapper">
-          <ul class="slider__list">
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/slider-katrine-desktop@1x.jpg" alt="Katrine grey cat illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title">Katrine</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/slider-jennifer-desktop@1x.jpg" alt="Puppy Jennifer illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title">Jennifer</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/slider-woody-desktop@1x.jpg" alt="Golden retriever Woody illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title">Woody</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/catalog-sophia-desktop@1x.jpg" alt="Sophia illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title">Sophia</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/catalog-timmy-desktop@1x.jpg" alt="Timmy illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title">Timmy</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/catalog-charly-desktop@1x.jpg" alt="Charly illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title">Charly</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/catalog-scarlett-desktop@1x.jpg" alt="Scarlett illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title">Scarlett</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/catalog-freddie-desktop@1x.jpg" alt="Freddie illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title">Freddie</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <ul class="slider__list"></ul>
         </div>
         <div class="slider__pagination pagination">
           <ul class="pagination__list">
-            <li class="pagination__item pagination__item--inactive">
-              <button class="pagination__button control-button" type="button" aria-label="First catalog page">
-                <svg class="pagination__icon pagination__icon--double-arrow pagination__icon--double-arrow-left" role="img">
-                  <use xlink:href="../../assets/icons/sprite.svg#icon-pets-double-arrow"></use>
-                </svg>
-              </button>
-            </li>
-            <li class="pagination__item pagination__item--inactive">
-              <button class="pagination__button control-button" type="button" aria-label="Previous catalog page">
-                <svg class="pagination__icon pagination__icon--arrow-left" role="img">
-                  <use xlink:href="../../assets/icons/sprite.svg#icon-pets-arrow"></use>
-                </svg>
-              </button>
-            </li>
-            <li class="pagination__item pagination__item--active">
-              <button class="pagination__button control-button" type="button">
-                <div class="pagination__page h4 title">1</div>
-              </button>
+            <li class="pagination__item">
+              <button class="pagination__button control-button pagination__button--first" type="button" aria-label="First catalog page" disabled>&lt;&lt;</button>
             </li>
             <li class="pagination__item">
-              <button class="pagination__button control-button" type="button" aria-label="Next catalog page">
-                <svg class="pagination__icon" role="img">
-                  <use xlink:href="../../assets/icons/sprite.svg#icon-pets-arrow"></use>
-                </svg>
-              </button>
+              <button class="pagination__button control-button pagination__button--prev" type="button" aria-label="Previous catalog page" disabled>&lt;</button>
             </li>
             <li class="pagination__item">
-              <button class="pagination__button control-button" type="button" aria-label="Last catalog page">
-                <svg class="pagination__icon pagination__icon--double-arrow" role="img">
-                  <use xlink:href="../../assets/icons/sprite.svg#icon-pets-double-arrow"></use>
-                </svg>
-              </button>
+              <button class="pagination__button control-button pagination__button--page" type="button">1</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__button control-button pagination__button--next" type="button" aria-label="Next catalog page">&gt;</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__button control-button pagination__button--last" type="button" aria-label="Last catalog page">&gt;&gt; </button>
             </li>
           </ul>
         </div>
@@ -213,5 +123,6 @@
       </div>
     </footer>
   </div>
+  <script defer type="module" src="index.js"></script>
 </body>
 </html>

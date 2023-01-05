@@ -1,5 +1,12 @@
 .header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-bottom: 0;
   padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
 }
 
 .header--pets::after {
@@ -28,6 +35,7 @@
 
 .slider__list {
   margin-bottom: 15px;
+  padding: 0;
 }
 
 .slider__wrapper {
@@ -49,24 +57,34 @@
   list-style: none;
 }
 
-.pagination__item--active .pagination__button {
+.pagination__button {
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  padding: 10px;
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  transition: 0.5s ease-in;
+}
+
+.pagination__button--page {
+  pointer-events: none;
   border: 2px solid #f1cdb3;
   background-color: #f1cdb3;
 }
 
-.pagination__item--inactive .pagination__button {
+.pagination__button:disabled {
+  pointer-events: none;
+  fill: #cdcdcd;
   border: 2px solid #cdcdcd;
 }
 
-.pagination__item--inactive .pagination__icon {
-  fill: #cdcdcd;
-}
-
-.pagination__button {
-  align-items: baseline;
-  width: 52px;
-  height: 52px;
-  padding: 10px;
+.pagination__button:hover {
+  background: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .pagination__page {
@@ -91,21 +109,22 @@
 }
 
 @media screen and (max-width: 1279px) {
-  .header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    margin-bottom: 0;
-    padding-bottom: 30px;
-    background-color: #ffffff;
+  .slider {
+    padding-bottom: 76px;
+  }
+
+  .slider__title {
+    margin-bottom: 30px;
   }
 
   .slider__wrapper {
+    display: flex;
+    justify-content: center;
     margin-bottom: 40px;
   }
 
   .slider__list {
+    max-width: 710px;
     margin-bottom: 0;
   }
 
@@ -113,12 +132,38 @@
     justify-content: center;
   }
 
-  .slider__item:nth-child(7n) {
-    display: none;
+  .slider__item {
+    min-height: 435px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  body.no-scroll .header{
+    position: static;
+    z-index: unset;
+  }
+
+  body.no-scroll .header__title {
+    color: #f1cdb3;
+  }
+
+  body.no-scroll .header__subhead {
+    color: #ffffff;
+  }
+
+  .nav__link {
+    color: #fafafa;
+  }
+
+  .nav__item--active .nav__link {
+    color: #fafafa;
+    border-bottom: 3px solid #f1cdb3;  
+  }
+
+  .header__burger.open .header__icon--pets {
+    stroke: #f1cdb3;
+  }
+
   .pagination__list {
     gap: 10px;
   }
@@ -127,18 +172,20 @@
     font-size: 20px;
   }
 
+  .slider {
+    padding-bottom: 42px;
+  }
+
+  .slider__title {
+    margin-bottom: 42px;
+  }
+
   .slider__wrapper {
     padding-bottom: 0;
     margin-bottom: 42px;
   }
 
-  .slider__item:nth-child(2n) {
-    display: flex;
-  }
-
-  .slider__item:nth-child(4n),
-  .slider__item:nth-child(5n),
-  .slider__item:nth-child(6n) {
-    display: none;
+  .slider__list {
+    max-width: 300px;
   }
 }

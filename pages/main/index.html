@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="overlay"></div>
   <div class="container">
     <header class="page-header header wrapper">
       <a class="header__logo" href="#" aria-label="Cozy House Logo Image">
@@ -77,35 +78,7 @@
               <use xlink:href="../../assets/icons/sprite.svg#icon-left-arrow"></use>
             </svg>
           </button>
-          <ul class="slider__list">
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/slider-katrine-desktop@1x.jpg" alt="Katrine grey cat illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title h3">Katrine</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/slider-jennifer-desktop@1x.jpg" alt="Puppy Jennifer illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title h3">Jennifer</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-            <li class="slider__item">
-              <div class="slider__link">
-                <img class="slider__image" src="../../assets/images/slider-woody-desktop@1x.jpg" alt="Golden retriever Woody illustration">
-                <div class="slider__inner">
-                  <h3 class="slider__card-name title h3">Woody</h3>
-                  <button class="slider__button-more button button--more" type="button">Learn more</button>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <ul class="slider__list"></ul>
           <button class="slider__control-button slider__control-button--right control-button" type="button" aria-label="Next slider page">
             <svg class="slider__icon slider__icon--right-arrow" role="img">
               <use xlink:href="../../assets/icons/sprite.svg#icon-left-arrow"></use>
@@ -264,5 +237,6 @@
       </div>
     </footer>
   </div>
+  <script defer type="module" src="index.js"></script>
 </body>
 </html>
